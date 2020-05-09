@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="description" content="Servicios de diseño y desarrollo web, desarrollo de software y gestion de bases de datos" />
+	<meta name="keywords" content="desarrollo web, desarrollo software, tutoriales, cursos, bases de datos, diseño web, desarrollo de software, Erick Garcia, Desarrollador de Sistemas de Información" />
+	<meta name="author" content="Erick Michel Garcia Amaris" />
+	<title>Parte 8</title>
+	<link rel="shorcut icon" href="../../img/favicon.ico" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+	<link rel="stylesheet" href="../../css/fontello.css" />
+	<link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+	<link rel="stylesheet" href="../../css/main.css" />
+	<link rel="stylesheet" href="../../styles/idea.css"><!--idea-->
+	<script src="../../js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	<!-- HEADER Y MENU DE NAVEGACION -->
+		<nav class="nav">
+			<p class="icon-location location">Medellin - Colombia</p>
+			<ul class="ul" id="menu">
+				<h1 class="nombre-logo">ERICK GARCÍA</h1>
+				<li class="item"><a href="../../" class="link text-black">INICIO</a></li>
+				<li class="item"><a href="" class="link text-black">PORTAFOLIO</a></li>
+				<li class="item"><a href="" class="link text-black">SERVICIOS</a></li>
+				<li class="item"><a href="../../blog.php" class="link activo text-black">BLOG</a></li>
+				<li class="item"><a href="../../contacto.php" class="link text-black">CONTACTO</a></li>
+				<li class="item"><a href="" class="link text-black">ACERCA DE</a></li>
+			</ul>
+		</nav>
+		<div class="icon-hamburger">
+			<div class="hamburger"></div>
+		</div>
+	<div>
+		<div class="banner-blog">
+			
+		</div>
+	</div>
+	<script>hljs.initHighlightingOnLoad();</script>
+
+	<div class="container mt-5">
+		<h1 class="titulo-video">Parte 8 del curso crea tu página web desde cero</h1>
+		<p>Utilización de iconos en una página web con Fontello</p>
+		<p><b>Nov / 24 / 2018</b></p>
+		<img class="img-blog mb-5 col-sm-12 col-lg-8" src="../../img-blog/video8.jpg" alt="">
+
+		<p class="mt-5">Primero que todo entramos a la página de <a href="http://fontello.com/">fontello.com</a> y seleccionamos los iconos deseados.</p>
+		<img class="img-blog img-fluid" src="../../img/fontello1.jpg" alt="">
+
+		<p class="mt-5">Luego podemos cambiar los nombres de los iconos a nuestro gusto dando click en la pestaña "<b>Customize Names</b>" (Recuerda que se puede cambiar el nombre solo despues de "<b>icon-</b>").</p>
+		<img class="img-blog img-fluid" src="../../img/fontello2.jpg" alt="">
+
+		<p class="mt-5">Ahora si podemos descargar los iconos dando click en el botón rojo que está en la parte superior derecha de la página.
+			Esto nos genera un archivo <b>.zip</b></p>
+		<img class="img-blog img-fluid" src="../../img/fontello3.jpg" alt="">
+
+		<p class="mt-5">Luego abrimos el arhivo <b>.zip</b> y lo unico que vamos a necesitar es la carpeta <b>font</b> y...</p>
+		<img class="img-blog img-fluid" src="../../img/fontello4.jpg" alt="">
+
+		<p class="mt-5">... el archivo <b>fontello.css</b> que está dentro de la carpeta <b>css. </b>Estos dos elementos los extraemos a nuestro proyecto.
+		</p>
+		<img class="img-blog img-fluid" src="../../img/fontello5.jpg" alt="">
+
+		<p class="mt-5">El archivo <b>fontello.css</b> lo tenemos que guardar dentro de una carpeta llamada css porque este archivo hace enlaces a otros archivos dentro de la carpeta <b>font</b> de la siguiente manera:</p>
+		<img class="img-blog img-fluid" src="../../img/fontello6.jpg" alt="">
+		
+		<h1 class="titulo-video mt-5">¡Importante!</h1>
+		<p>Lo primero que se ve en los enlaces es esto " <b>. . /</b> ", dos puntos de seguido y una barra invertida, seguido de esto dice <b>font</b>, como se ve en la imagen anterior. Este "simbolo" lo que hace en el enlace es que se está saliendo de una carpeta, luego de salirse de la carpeta busca la carpeta <b>font</b>. Por eso es muy importante guardar el archivo <b>fontello.css</b> dentro de una carpeta. ¿Pero si no quiero guardar los archivos css dentro de una carpeta?, lo único que tienes que hacer es borrar dicho simbolo " <b>. . /</b> " y listo.</p>
+
+		<p class="mt-5">
+			Para utilizar los iconos de fontello tenemos que enlazar en nuestra página HTML el archivo <b>fontello.css</b>, si lo tenemos dentro de una carpeta llamada css o cualquier otro nombre, lo hacemos de la siguiente manera:
+		</p>
+
+		<pre>
+			<code>
+				&lt;link rel="stylesheet" href="css/fontello.css"&gt;
+			</code>
+		</pre>
+		<p class="mt-5">
+			Si no, simplemente le quitamos el nombre de la carpeta (css) y la barra invertida (/) y quedaría de la siguiente manera
+		</p>
+
+		<pre>
+			<code>
+				&lt;link rel="stylesheet" href="fontello.css"&gt;
+			</code>
+		</pre>
+
+		<p class="mt-5">Y para empezar a pintar los iconos creas una etiqueta <b>span</b> vacía y le das una clase con el nombre del icono que quieres que se pinte o aparezca. No es estrictamente necesario utilizar la etiqueta <b>span</b>, puedes utilizar otras como la etiqueta <b>p</b> o titulos como <b>h1</b>, <b>h2</b>, etc. <br>
+			En mi caso, metí cada <b>span</b> dentro de una etiqueta <b>a</b> para que el icono sea un enlace.</p>
+		
+		<pre>
+			<code>
+				
+			&lt;div class="redes">
+			   &lt;a href="https://www.facebook.com/" target="blank"&gt;
+			      &lt;span class="icon-facebook"&gt;&lt;/span&gt;
+			   &lt;/a&gt;
+
+			   &lt;a href="https://twitter.com/" target="blank"&gt;
+			      &lt;span class="icon-twitter"&gt;&lt;/span&gt;
+			   &lt;/a&gt;
+
+			   &lt;a href="https://www.instagram.com/" target="blank"&gt;
+			      &lt;span class="icon-instagram"&gt;&lt;/span&gt;
+			   &lt;/a&gt;
+			&lt;/div&gt;
+
+			</code>
+		</pre>
+
+		<p class="mt-5">
+			A continuación te dejo el vídeo y el enlace del mismo.  
+		</p>
+		<a href="https://www.youtube.com/watch?v=ecMl50oCsn4&t=2s">&raquo;&raquo; Vídeo número 8 del curso crea tu página web desde cero &laquo;&laquo;</a>
+
+		<iframe class="video-blog col-lg-8 col-sm-12 mt-5" width="600" height="370" src="https://www.youtube.com/embed/ecMl50oCsn4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	
+	<footer class="row">
+		<div class="col-lg-6 col-sm-12">
+			<p>Copyright &copy; 2018. Erick Garcia Todos los derechos reservados</p>
+		</div>
+		<div class="col-lg-6 col-sm-12">
+			<a href=""><span class="icon-facebook-official"></span></a>
+			<a href=""><span class="icon-instagram"></span></a>
+			<a href=""><span class="icon-youtube-play"></span></a>
+			<a href=""><span class="icon-linkedin-squared"></span></a>
+		</div>
+	</footer>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script src="../../js/menu.js"></script>
+	<script src="../../js/scroll.js"></script>
+</body>
+</html>
