@@ -41,6 +41,15 @@ div.banner{
 	z-index: -100;
 	margin: 0;
 }
+
+div.banner .row{
+	height: 100vh;
+}
+
+div.banner .row img{
+	height: auto;
+}
+
 div#particles-js{
 	background-image: url(../img/universo2.jpeg);
 	background-repeat: no-repeat;
